@@ -1,8 +1,10 @@
 #include <stdbool.h>
+#include <stddef.h>
 
-struct Block {
-  size_t size,
-  bool allocated
-};
+typedef struct Block {
+  size_t size;
+  bool allocated;
+} Block;
 
+Block *init_heap(void);
 
