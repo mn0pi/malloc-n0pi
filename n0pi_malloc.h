@@ -9,3 +9,5 @@ typedef struct Block {
 
 Block *init_heap(void);
 
+void *n0pi_malloc(size_t size);
+
