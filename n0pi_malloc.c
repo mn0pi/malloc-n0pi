@@ -14,10 +14,12 @@ void *init_heap() {
     return NULL;
   }
   Block *heap_start = (Block*)heap;
+  heap_start->size = size;
   heap_start->next = NULL;
   heap_start->prev = NULL;
   freeListRoot = heap_start;
   freeListLength = 1;
+  return heap_start;
 }
 
 void *n0pi_malloc(size_t size) {
