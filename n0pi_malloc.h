@@ -7,7 +7,7 @@ typedef struct Block {
   struct Block *prev;
 } Block;
 
-Block *init_heap(void);
+void *init_heap(void);
 
 void *n0pi_malloc(size_t size);
 
