@@ -3,7 +3,8 @@
 
 typedef struct Block {
   size_t size;
-  bool allocated;
+  struct Block *next;
+  struct Block *prev;
 } Block;
 
 Block *init_heap(void);
